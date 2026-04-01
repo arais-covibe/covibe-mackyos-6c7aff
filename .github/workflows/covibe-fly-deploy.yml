@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       source_sha:
-        description: Commit SHA to deploy
+        description: Commit SHA to deploydddddddd
         required: true
         type: string
 
