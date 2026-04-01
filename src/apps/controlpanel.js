@@ -1,36 +1,39 @@
 // Control Panel
+const panels = [
+  { name: "General", icon: "⚙️" },
+  { name: "Monitors", icon: "🖥️" },
+  { name: "Sound", icon: "🔊" },
+  { name: "Keyboard", icon: "⌨️" },
+  { name: "Mouse", icon: "🖱️" },
+  { name: "Network", icon: "🌐" },
+  { name: "Date & Time", icon: "🕐" },
+  { name: "Memory", icon: "💾" },
+];
+
 export const controlPanelApp = {
   id: "controlpanel",
   title: "Control Panels",
   icon: "⚙️",
-  defaultWidth: 380,
-  defaultHeight: 280,
-  render: () => `
-    <div class="control-panel">
-      <div class="control-panel-item">
-        <span class="cp-icon">🖥️</span>
-        <span class="cp-label">Monitors</span>
+  defaultWidth: 420,
+  defaultHeight: 320,
+  render: () => {
+    const panelItems = panels
+      .map(
+        (p) => `
+        <div class="app-cp-item">
+          <div class="app-cp-icon">${p.icon}</div>
+          <div class="app-cp-name">${p.name}</div>
+        </div>
+      `
+      )
+      .join("");
+
+    return `
+      <div class="app-controlpanel">
+        <div class="app-cp-grid">
+          ${panelItems}
+        </div>
       </div>
-      <div class="control-panel-item">
-        <span class="cp-icon">🔊</span>
-        <span class="cp-label">Sound</span>
-      </div>
-      <div class="control-panel-item">
-        <span class="cp-icon">⌨️</span>
-        <span class="cp-label">Keyboard</span>
-      </div>
-      <div class="control-panel-item">
-        <span class="cp-icon">🖱️</span>
-        <span class="cp-label">Mouse</span>
-      </div>
-      <div class="control-panel-item">
-        <span class="cp-icon">🌐</span>
-        <span class="cp-label">Network</span>
-      </div>
-      <div class="control-panel-item">
-        <span class="cp-icon">🕐</span>
-        <span class="cp-label">Date & Time</span>
-      </div>
-    </div>
-  `,
+    `;
+  },
 };

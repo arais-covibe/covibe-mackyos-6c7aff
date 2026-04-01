@@ -1,5 +1,5 @@
 // App Registry - All apps are registered here
-// Agent B: Add your app imports and include them in the apps array
+import "./apps.css";
 
 import { aboutApp } from "./about.js";
 import { finderApp } from "./finder.js";

@@ -1,20 +1,29 @@
 // About This Mac
 export const aboutApp = {
   id: "about",
-  title: "About This Mac",
+  title: "About This Macintosh",
   icon: "🖥️",
-  defaultWidth: 320,
-  defaultHeight: 240,
+  defaultWidth: 400,
+  defaultHeight: 280,
   render: () => `
-    <div class="about-box">
-      <div class="logo">🍎</div>
-      <h1>MackyOS</h1>
-      <p>System 7.5.3</p>
-      <div class="version">Built with ❤️ at CoVibe Hackathon</div>
-      <hr>
-      <p><strong>MackyOS Computer</strong></p>
-      <p>Built-in Memory: 640K</p>
-      <div class="version">© 2026 CoVibe Team</div>
+    <div class="app-about">
+      <div class="about-icon">
+        <div class="about-mac-icon">🖥</div>
+      </div>
+      <div class="about-info">
+        <h2>MackyOS</h2>
+        <p class="about-version">System 7.5.3</p>
+        <div class="about-divider"></div>
+        <p>Built with ♥ at CoVibe Hackathon</p>
+        <p class="about-detail">Total Memory: 8 MB</p>
+        <p class="about-detail">Largest Unused Block: 4,096K</p>
+        <div class="about-memory-bar">
+          <div class="about-memory-used" style="width: 62%">
+            <span>System: 5 MB</span>
+          </div>
+        </div>
+        <p class="about-detail about-copyright">© 2026 CoVibe Technologies</p>
+      </div>
     </div>
   `,
 };
