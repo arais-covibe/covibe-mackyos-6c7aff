@@ -49,12 +49,55 @@ body {
   font-size: 12px;
 }
 
+.apple-menu-wrapper {
+  position: relative;
+  margin-right: 8px;
+}
+
 .menu-bar .apple-menu {
   font-weight: bold;
   font-size: 14px;
-  margin-right: 16px;
   cursor: pointer;
   padding: 0 4px;
+}
+
+.menu-bar .apple-menu:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Apple Dropdown */
+.apple-dropdown {
+  display: none;
+  position: absolute;
+  top: 18px;
+  left: 0;
+  background: #fff;
+  border: 2px solid #000;
+  min-width: 200px;
+  z-index: 10001;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+}
+
+.apple-dropdown.visible {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 2px 16px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.dropdown-item:hover {
+  background: #000;
+  color: #fff;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: #999;
+  margin: 2px 8px;
 }
 
 .menu-bar .menu-item {
@@ -365,4 +408,59 @@ body {
 .control-panel-item .cp-label {
   font-size: 10px;
   text-align: center;
+}
+
+/* ===== BOOT SCREEN ===== */
+.boot-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #c0c0c0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  transition: opacity 0.5s ease;
+}
+
+.boot-screen.boot-fade {
+  opacity: 0;
+}
+
+.boot-content {
+  text-align: center;
+}
+
+.boot-logo {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.boot-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  letter-spacing: 2px;
+}
+
+.boot-bar-container {
+  width: 240px;
+  height: 12px;
+  border: 2px solid #000;
+  background: #fff;
+  margin: 0 auto 12px;
+}
+
+.boot-bar {
+  height: 100%;
+  width: 0%;
+  background: #333;
+  transition: width 0.2s ease;
+}
+
+.boot-text {
+  font-size: 11px;
+  color: #555;
 }
