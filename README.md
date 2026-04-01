@@ -1,4 +1,4 @@
-# static
+# MackyOS
 
 Minimal Vite static site template served by nginx on port `8080`.
 
